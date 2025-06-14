@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <title>Perfil</title>
-  <link rel="stylesheet" href="perfil.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RecyNet - Perfil</title>
+  <link rel="stylesheet" href="perfil.css" />
 </head>
 <body>
+  <!-- Navbar -->
   <nav class="navbar">
     <div class="logo">♻ RecyNet ♻</div>
     <div class="menu-centro">
@@ -19,14 +21,27 @@
       <a href="cooperado.html">Home</a>
       <a href="servicos.html">Serviços</a>
       <a href="perfil.html" class="botao ativo">Perfil</a>
+      <a href="recynet.html">Sair</a>
     </div>
   </nav>
 
-  <main>
-    <h1 class="titulo">Perfil do Usuário</h1>
-    <p>Email: usuario123@gmail.com</p>
-    <button class="baixar">Editar Perfil</button>
-    <button class="baixar">Trocar Senha</button>
+  <!-- Perfil -->
+  <main class="perfil-container">
+    <div class="card-perfil">
+      <h1 class="titulo">Perfil do Usuário</h1>
+      <p class="info"><strong>Nome:</strong> (Usuário)</p>
+      <p class="info"><strong>Email:</strong> usuario123@gmail.com</p>
+      <p class="info"><strong>Telefone:</strong> (27) 99999-8888</p>
+
+      <div class="botoes">
+        <button class="botao-acao">Editar Perfil</button>
+        <button class="botao-acao">Trocar Senha</button>
+      </div>
+    </div>
   </main>
+
+  <footer>
+    <p>© 2025 Fortes Engenharia - Projeto RecyNet</p>
+  </footer>
 </body>
 </html>

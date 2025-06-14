@@ -1,4 +1,4 @@
-/* Reset e base */
+/* === BASE === */
 * {
   margin: 0;
   padding: 0;
@@ -6,192 +6,215 @@
 }
 
 body {
-  font-family: 'Arial', sans-serif;
-  background: #7cbf64;
+  font-family: Arial, sans-serif;
+  background-color: #7cbf64;
   color: #1b5e20;
   min-height: 100vh;
 }
 
-/* NAVBAR */
+/* === NAVBAR === */
 .navbar {
+  width: 100%;
   background: #81c784;
-  padding: 15px 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 20px 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   flex-wrap: wrap;
-  gap: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  
+}
+
+.nav-esquerda {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 .logo {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: bold;
   color: #1b5e20;
-  display: flex;
-  align-items: center;
-  gap: 10px;
 }
 
-/* Menu central */
-.menu-centro {
+.menu {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  justify-content: center;
 }
 
-.menu-centro .botao {
+.botao {
+  background: #e8f5e9;
+  color: #2e7d32;
   padding: 10px 18px;
-  background: white;
-  color: #1b5e20;
   border-radius: 25px;
   font-weight: bold;
   text-decoration: none;
-  transition: 0.3s;
+  transition: 0.2s;
 }
 
-.menu-centro .botao:hover {
+.botao:hover {
   background: #c8e6c9;
 }
 
-.menu-centro .botao.ativo {
-  background: #000000;
+.botao.ativo {
+  background: #2e7d32;
   color: white;
 }
 
-/* Menu lateral direito */
-.menu-direita {
+.nav-direita {
   display: flex;
   gap: 15px;
   flex-wrap: wrap;
 }
 
-.menu-direita a {
+.nav-direita a {
   text-decoration: none;
   color: #0d47a1;
   font-weight: bold;
+  transition: 0.2s;
 }
 
-.menu-direita a:hover {
+.nav-direita a:hover {
   text-decoration: underline;
 }
 
-/* CONTEÚDO PRINCIPAL */
-main {
-  max-width: 1100px;
-  margin: auto;
-  padding: 30px 20px;
+/* === CONTEÚDO CENTRALIZADO === */
+.container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
   text-align: center;
 }
 
+/* TITULOS */
 .titulo {
-  font-size: 2.2rem;
-  margin: 0;
+  font-size: 2rem;
+  color: #000000;
 }
 
 .subtitulo {
-  margin-bottom: 40px;
-  color: #2e7d32;
+  margin-bottom: 2rem;
+  color: #333;
 }
 
-/* PAINEL */
+/* BLOCO CENTRAL */
 .painel {
   display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 3rem;
+  margin: auto;
   flex-wrap: wrap;
-  gap: 40px;
-  justify-content: space-between;
+  max-width: 1000px;
 }
 
-/* COLUNAS */
-.ranking,
-.relatorio {
-  background: white;
-  border-radius: 15px;
-  padding: 20px;
-  flex: 1 1 45%;
-  box-shadow: 0 0 10px #ccc;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.ranking h2,
-.relatorio h2 {
-  margin-top: 0;
-}
-
-.ranking ul,
-.materiais ul {
-  list-style: none;
-  padding: 0;
-  text-align: left;
-  background: #eee;
-  padding: 10px;
-  border-radius: 10px;
-}
-
-.ranking li,
-.materiais li {
-  margin: 6px 0;
-}
-
-/* GRÁFICO */
-#grafico {
+/* CAIXAS */
+.ranking, .grafico {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  padding: 1.5rem;
   width: 100%;
-  max-width: 300px;
-  height: 180px;
-  background: #dcedc8;
-  margin: 15px 0;
-  border-radius: 10px;
-  padding: 5px;
+  max-width: 400px;
 }
 
-/* PONTUAÇÃO */
+.ranking ul, .materiais ul {
+  text-align: left;
+  padding-left: 1rem;
+  margin-top: 1rem;
+}
+
+.ranking li, .materiais li {
+  margin: 0.5rem 0;
+}
+
+.grafico canvas {
+  margin: 1rem auto;
+  max-width: 100%;
+}
+
+/* PONTOS E BOTÃO */
 .pontos {
-  font-size: 1.5rem;
   font-weight: bold;
-  color: #33691e;
-  margin: 10px 0;
+  font-size: 1.1rem;
+  margin: 1rem 0;
 }
 
-/* BOTÃO DE DOWNLOAD */
-.baixar {
-  color: #1e88e5;
+.botao-baixar {
+  display: block;
+  margin: 1rem auto;
+  padding: 0.6rem 1.2rem;
+  background-color: #43a047;
+  color: white;
+  border-radius: 10px;
   font-weight: bold;
-  cursor: pointer;
-  margin-bottom: 20px;
+  text-align: center;
+  text-decoration: none;
+  width: fit-content;
+}
+
+.botao-baixar:hover {
+  background-color: #388e3c;
+}
+
+/* LISTA DE MATERIAIS */
+.materiais h3 {
+  margin-top: 1rem;
+  color: #4c9141;
+}
+
+/* INÍCIO */
+.inicio {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: #e0f7da;
+  border: none;
+  color: #333;
+  border-radius: 6px;
   text-decoration: none;
 }
 
-.baixar:hover {
-  text-decoration: underline;
+/* === FILTROS === */
+.filtros {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
 }
 
-/* BOTÃO INÍCIO */
-.inicio {
-  margin-top: auto;
-  padding: 10px 18px;
-  background: #e0e0e0;
-  border: none;
-  border-radius: 15px;
-  font-weight: bold;
-  cursor: pointer;
+.filtros label {
+  font-weight: 600;
+  color: #4c9141;
 }
 
-.inicio:hover {
-  background: #ccc;
+.filtros select {
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
 }
 
-/* RESPONSIVO */
+/* === RESPONSIVO === */
 @media (max-width: 768px) {
   .painel {
     flex-direction: column;
+    align-items: center;
   }
 
-  .menu-centro,
-  .menu-direita {
+  .ranking, .grafico {
+    width: 90%;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .menu, .nav-direita {
     justify-content: center;
   }
 }

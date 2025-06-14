@@ -99,25 +99,33 @@ main {
 
 .recompensas-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+  padding: 0 10px;
 }
 
 .recompensa-card {
   background: white;
-  padding: 30px 20px;
+  padding: 25px 20px;
   border-radius: 16px;
   box-shadow: 0 0 12px rgba(0,0,0,0.1);
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, background 0.3s;
 }
 
 .recompensa-card:hover {
   transform: translateY(-5px);
   background: #f1f8e9;
+}
+
+.recompensa-card img {
+  width: 100%;
+  max-width: 160px;
+  height: auto;
+  margin-bottom: 15px;
+  border-radius: 8px;
 }
 
 .recompensa-card h2 {
@@ -167,5 +175,18 @@ footer {
   .menu-centro,
   .menu-direita {
     justify-self: center;
+  }
+
+  .menu-direita {
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .recompensas-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .recompensa-card {
+    width: 100%;
   }
 }
