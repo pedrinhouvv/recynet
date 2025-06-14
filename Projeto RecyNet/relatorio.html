@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RecyNet - Relatório</title>
+  <link rel="stylesheet" href="relatorio.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+
+  <nav class="navbar">
+  <div class="logo">♻ RecyNet ♻</div>
+
+  <div class="menu-centro">
+    <a href="locais.html" class="botao">Locais de Coleta</a>
+    <a href="relatorio.html" class="botao">Relatório</a>
+    <a href="pontuacao.html" class="botao">Pontuação</a>
+    <a href="noticias.html" class="botao">Notícias</a>
+    <a href="recompensas.html" class="botao">Recompensas</a>
+  </div>
+
+  <div class="menu-direita">
+    <a href="cooperado.html">Home</a>
+    <a href="servicos.html">Serviços</a>
+    <a href="perfil.html">Perfil</a>
+  </div>
+</nav>
+
+
+  <main>
+    <h1 class="titulo">Relatório</h1>
+    <p class="subtitulo">Acompanhe sua jornada de reciclagem.</p>
+
+    <div class="painel">
+
+      <section class="ranking">
+        <h2>Ranking Estadual</h2>
+        <p>Você está em primeiro<br>lugar no ranking, parabéns!</p>
+        <ul>
+          <li>(Usuário) 1º Lugar - 250 kg Reciclado</li>
+          <li>Edgar UVV 2º Lugar - 230 kg Reciclado</li>
+          <li>Fabiana 3º Lugar - 200 kg Reciclado</li>
+          <li>Renato 4º Lugar - 142 kg Reciclado</li>
+          <li>João Vyctor 5º Lugar - 100 kg Reciclado</li>
+          <li>Erick Dias 6º Lugar - 69 kg Reciclado</li>
+        </ul>
+      </section>
+
+      <section class="relatorio" id="relatorio">
+        <h2>Relatório de Reciclagem</h2>
+        <canvas id="grafico"></canvas>
+        <p class="pontos">6602 Pontos</p>
+        <a class="baixar" id="btnBaixar">Baixar Relatório</a>
+
+        <div class="materiais">
+          <h3>Lista de Materiais reciclados</h3>
+          <ul>
+            <li>100 kg Plástico</li>
+            <li>50 kg Papel</li>
+            <li>50 kg Eletrônicos</li>
+            <li>25 kg Vidro</li>
+            <li>25 kg Metal</li>
+          </ul>
+        </div>
+
+        <button class="inicio">Início</button>
+      </section>
+
+    </div>
+  </main>
+
+  <script src="relatorio.js"></script>
+</body>
+</html>
